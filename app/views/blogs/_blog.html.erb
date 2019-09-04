@@ -1,0 +1,19 @@
+<div class="blog-post">
+      <h2 class="blog-post-title"><%=link_to blog.title.upcase, blog %></h2>
+      <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</a></p>
+      <p>
+      	<%= blog.body %>
+      </p>
+         <%= link_to 'Edit', edit_blog_path(blog)%></a>
+         <%= link_to 'New', new_blog_path(blog)%></a>
+         <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?'}%></a>
+     <br>
+     <br>
+     <br>
+     <br>
+   
+</div>
+
+
+
+
